@@ -19,7 +19,7 @@ Once all extra characters have been removed the function returns the new date.
 size_check() The function will compare the size of the inputted date with the size expected for the integer value, 
 such as year, month or day and return either True if the input is correct, or False if the input is incorrect.
 
-usage() The function will take any other function name as an input and return a string describing exactly what the function that was called does.
+usage() The function will take return a string showing the usage of this script. The string shows the type of acceptable input.
 
 
 
