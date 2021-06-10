@@ -1,3 +1,5 @@
+https://github.com/mdhami6/Assignment1/blob/main/algorithm_mdhami6.txt
+
 Main Program
 The purpose of this program is to take the date YYYYMMDD in a variety of different formats and return the date in MMM DD, YYYY. 
 First the program will have to be cleaned up and remove any extra characters, then pass through a few checking scripts to confirm that the date is an acceptable input. 
