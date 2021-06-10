@@ -1,0 +1,25 @@
+Main Program
+The purpose of this program is to take the date YYYYMMDD in a variety of different formats and return the date in MMM DD, YYYY. 
+First the program will have to be cleaned up and remove any extra characters, then pass through a few checking scripts to confirm that the date is an acceptable input. 
+After it is cross referenced to make sure each part of the date falls under a correct range and then confirms whether or not it is a leap year. 
+After everything has been checked and confirmed as either True of False the program will commence taking the acceptable input and converting it to the newly formatted date. 
+We then print the formatted date for the user. 
+
+leap_year() The function will take in the year input from sanitize() and cross check with its table. 
+If the year falls under a lear year the function will return True, otherwise will return false.
+
+range_check() The function will take the entire date from sanitize and will check to see if the dates for each YYYY, MM and DD fall inside of the range, 
+for example there can be no thirteenth month, or thirty-second day.
+
+sanitize() The function will take the date input from the user and remove any extra character delimiters, such as '.', '/' or '-'. 
+Once all extra characters have been removed the function returns the new date.
+
+size_check() The function will compare the size of the inputted date with the size expected for the integer value, 
+such as year, month or day and return either True if the input is correct, or False if the input is incorrect.
+
+usage() The function will take any other function name as an input and return a string describing exactly what the function that was called does.
+
+
+
+
+
