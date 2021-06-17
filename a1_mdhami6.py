@@ -24,7 +24,7 @@ import sys
 
 
 def leap_year(obj):
-	if (isintance((obj / 4), int)) == True:
+	if (isinstance((obj / 4), int)) == True:
 		status = True
 	else:
 		status = False
@@ -59,7 +59,7 @@ def size_check(obj, intobj):
 
 def range_check(obj1, obj2):
 	
-	if obj1 in range(obj2):
+	if int(obj1) in range(int(obj2[0]), int(obj[1])):
 		status = True
 	else:
 		status = False
