@@ -19,7 +19,8 @@ violators will be reported and appropriate action will be taken.
 import os
 import sys
 
-
+##
+##
 def leap_year(obj):
 	if (isinstance((obj / 4), int)) == True:
 		status = True
@@ -27,13 +28,14 @@ def leap_year(obj):
 		status = False
 
 	return status
+##
+##
 
 
 
 
-
-
-def sanitize(obj1,obj2):
+#Takes the input from the user and cleans it up to be able to be used in the script. Removing all special characters and confirming the format.
+def sanitize(obj1):
 	results = obj1.strip("/, -, .")
 	number = results.isdigit()
 	if number == True:
@@ -43,7 +45,7 @@ def sanitize(obj1,obj2):
 		sys.exit()
 
 
-
+#Takes the newly sanitzed variable and counts
 def size_check(obj, intobj):
 	if len(obj) == intobj:
 		status = True
@@ -53,7 +55,7 @@ def size_check(obj, intobj):
 
 
 
-
+#Takes the year inputted and confirms if it is within the set range 1900:9999
 def range_check(obj1, obj2):
 	
 	if int(obj1) in range(int(obj2[0]), int(obj2[1])):
@@ -65,21 +67,19 @@ def range_check(obj1, obj2):
 
 
 
-
+#Returns how to use the program if not entered with an arguments
 def usage():    
 	status = "Usage: a1_mdhami6.py YYYYMMDD | YYYY/MM/DD | YYYY-MM-DD | YYYY.MM.DD"
 	return status
 
+
+
 if __name__ == "__main__":
-
-
 
    # step 1
    if len(sys.argv) != 2:
       print(usage())
       sys.exit()
-
-
 
    # step 2
    month_name = ['Jan','Feb','Mar','Apr','May','Jun',
@@ -88,14 +88,10 @@ if __name__ == "__main__":
                     7:31, 8:31, 9:30, 10:31, 11:30, 12:31}
    user_raw_data = sys.argv[1]
 
-
-
    # step 3
    allow_chars = '0123456789'
-   dob = sanitize(user_raw_data, allow_chars)
+   dob = sanitize(user_raw_data)
    print('Sanitized user data:', dob)
-
-
 
    # setp 4
    result = size_check(dob,8)
@@ -103,15 +99,10 @@ if __name__ == "__main__":
        print("Error 09: wrong data entered")
        sys.exit()
 
-
-
    # step 5
    year = int(dob[0:4])
    month = int(dob[4:6])
    day = int(dob[6:])
-
-
-
 
    # step 6
    result = range_check(year,(1900,9999))
@@ -130,12 +121,8 @@ if __name__ == "__main__":
        print("Error 03: wrong day entered")
        sys.exit()
 
-
-
    # step 7
    new_dob = str(month_name[month - 1])+' '+ str(day)+', '+str(year)
-
-
 
    # step 8
    print("Your date of birth is:", new_dob)  
