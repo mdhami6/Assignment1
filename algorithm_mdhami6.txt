@@ -7,14 +7,15 @@ After it is cross referenced to make sure each part of the date falls under a co
 After everything has been checked and confirmed as either True of False the program will commence taking the acceptable input and converting it to the newly formatted date. 
 We then print the formatted date for the user. 
 
-leap_year() The function will take in the year input from sanitize() and cross check with its table. 
-If the year falls under a lear year the function will return True, otherwise will return false.
+leap_year() The function will take in the year input from sanitize() if the year is divisible by 4 with no remainder
+it returns True otherwise any remainder returns False. If the year falls under a lear year the function will return False, otherwise will return True.
 
-range_check() The function will take the entire date from sanitize and will check to see if the dates for each YYYY, MM and DD fall inside of the range, 
-for example there can be no thirteenth month, or thirty-second day.
+range_check() The function will take the entire date from sanitize and will check to see if the dates for each YYYY, MM and DD fall inside of the range. 
+It checks for each day, month and year separately taking into consideration which month is being used for the amount of days. Also adds 1 so it falls inside the command.
+For example there can be no thirteenth month, or thirty-second day.
 
-sanitize() The function will take the date input from the user and remove any extra character delimiters, such as '.', '/' or '-'. 
-Once all extra characters have been removed the function returns the new date.
+sanitize() The function will take the date input from the user and remove all special characters using isalnum() to confirm only numbers and characters are used. 
+Then it confirms that only numbers are used with isdigit().
 
 size_check() The function will compare the size of the inputted date with the size expected for the integer value, 
 such as year, month or day and return either True if the input is correct, or False if the input is incorrect.
