@@ -19,7 +19,7 @@ violators will be reported and appropriate action will be taken.
 import os
 import sys
 
-#Checks to see if the year entered  is a lear year or not and returns True or False
+
 def leap_year(obj):
 	if (isinstance((obj / 4), int)) == True:
 		status = True
@@ -32,7 +32,7 @@ def leap_year(obj):
 
 
 
-#Takes the input
+
 def sanitize(obj1,obj2):
 	results = obj1.strip("/, -, .")
 	number = results.isdigit()
@@ -56,7 +56,7 @@ def size_check(obj, intobj):
 
 def range_check(obj1, obj2):
 	
-	if int(obj1) in range(int(obj2[0]), int(obj[1])):
+	if int(obj1) in range(int(obj2[0]), int(obj2[1])):
 		status = True
 	else:
 		status = False
